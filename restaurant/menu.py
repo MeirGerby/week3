@@ -1,4 +1,3 @@
-# from menu_items import MenuItem
 
 class Menu:
     def __init__(self):
