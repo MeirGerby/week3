@@ -20,12 +20,15 @@ class Soldier:
 
 
 class Unit:
-    def __init__(self, unit_name: str, commander: Soldier, soldiers: Soldier):
+    def __init__(self, unit_name: str, commander: Soldier, soldiers: list[Soldier], strike): #tank is an object from strike
         self.unit_name: str = unit_name
         self.commander: Soldier = commander
-        self.soldiers: Soldier = soldiers
+        self.soldiers: list[Soldier] = soldiers
+        self.strike = strike
 
     def briefing(self):
         print(f'Unit Name: {self.unit_name}')
         self.commander.report()
-        
+        self.strike.strike() # this should be work in main file, this file does not recognize this class
+
+
